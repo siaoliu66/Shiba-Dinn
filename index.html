@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiba-Dinn</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="css/calculator.css">
+    <script src="js/calculator.js"></script>
+</head>
 
-You can use the [editor on GitHub](https://github.com/siaoliu66/Shiba-Dinn/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<body>
+    <div class="wrap">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">商品金額</span>
+            </div>
+            <input type="number" class="form price" placeholder="請輸入日幣金額">
+        </div>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/siaoliu66/Shiba-Dinn/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">日本境內運費</span>
+            </div>
+            <input type="number" class="form shipping" placeholder="請輸入日本境內運費,無運費請填0">
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">預估重量</span>
+            </div>
+            <input type="number" class="form num" placeholder="請輸入預估重量(公斤)">
+        </div>
+        <div class="input-group"><input type="checkbox" class="vip">是否為VIP</div>
+        <button onclick="cal()">計算價格</button>
+        <span class="info">目前日幣匯率為0.273</span>
+        <hr>
+        <div class="text"></div>
+        <div class="copy"></div>
+    </div>
+</html>

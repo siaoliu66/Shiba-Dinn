@@ -20,7 +20,7 @@
                 vipPrice = totalPrice - 100
                 finalPrice = Math.round(vipPrice + num * 250 + 60)
                 if (Shipping == 0) {
-                    text += `<span class="Price">${toCurrency(price)}</span>* 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>🔷週年慶滿額折抵：${toCurrency(totalPrice)}-100=${toCurrency(vipPrice)}`
+                    text += `<span class="Price">${toCurrency(price)}</span>* 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>🔷週年慶滿額折抵：${toCurrency(totalPrice)} - 100 = ${toCurrency(vipPrice)}`
                 } else {
                     text += `(<span class="Price">${toCurrency(price)}</span> + <span class="Shipping">${toCurrency(Shipping)}</span>(日本境內運費)) * 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>🔷週年慶滿額折抵：${toCurrency(totalPrice)} - 100 = ${toCurrency(vipPrice)}`
                 }
@@ -28,7 +28,7 @@
                 vipPrice = totalPrice - 150
                 finalPrice = Math.round(vipPrice + num * 250 + 60)
                 if (Shipping == 0) {
-                    text += `<span class="Price">${toCurrency(price)}</span>* 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>🔷週年慶滿額折抵：${toCurrency(totalPrice)}-150=${toCurrency(vipPrice)}`
+                    text += `<span class="Price">${toCurrency(price)}</span>* 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>🔷週年慶滿額折抵：${toCurrency(totalPrice)} - 150 = ${toCurrency(vipPrice)}`
                 } else {
                     text += `(<span class="Price">${toCurrency(price)}</span> + <span class="Shipping">${toCurrency(Shipping)}</span>(日本境內運費)) * 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>🔷週年慶滿額折抵：${toCurrency(totalPrice)} - 150 = ${toCurrency(vipPrice)}`
                 }
@@ -36,7 +36,7 @@
                 vipPrice = totalPrice - 200
                 finalPrice = Math.round(vipPrice + num * 250 + 60)
                 if (Shipping == 0) {
-                    text += `<span class="Price">${toCurrency(price)}</span>* 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>🔷週年慶滿額折抵：${toCurrency(totalPrice)}-200=${toCurrency(vipPrice)}`
+                    text += `<span class="Price">${toCurrency(price)}</span>* 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>🔷週年慶滿額折抵：${toCurrency(totalPrice)} - 200 = ${toCurrency(vipPrice)}`
                 } else {
                     text += `(<span class="Price">${toCurrency(price)}</span> + <span class="Shipping">${toCurrency(Shipping)}</span>(日本境內運費)) * 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>🔷週年慶滿額折抵：${toCurrency(totalPrice)} - 200 = ${toCurrency(vipPrice)}`
                 }

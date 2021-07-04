@@ -47,8 +47,8 @@
         } else {
             if (Shipping == 0) {
                 text += `<span class="Price">${toCurrency(price)}</span>`
-            } else { text += `(<span class="Price">${toCurrency(price)}</span> + <span class="Shipping">${toCurrency(Shipping)}</span>(日本境內運費) )` }
-            text += `* 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>
+            } else { text += `(<span class="Price">${toCurrency(price)}</span> + <span class="Shipping">${toCurrency(Shipping)}</span>(日本境內運費))` }
+            text += ` * 0.273 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>
 🔷國際運費：1公斤250元</br>
 🔷應付金額：<span class="totalPrice">${toCurrency(totalPrice)}</span> + <span class="Num">250*${num}</span>(重量預估${num}kg以內) + 60(超商運費) = <span class="finalPrice">${toCurrency(finalPrice)}</span><p>`
         }

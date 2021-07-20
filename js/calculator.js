@@ -41,7 +41,7 @@
                     text += `[<span class="Price">${toCurrency(price)}</span> + <span class="Shipping">${toCurrency(Shipping)}</span>(日本境內運費)] * 0.274 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>🔷週年慶滿額折抵：${toCurrency(totalPrice)} - 200 = ${toCurrency(vipPrice)}`
                 }
             }else{
-                alert('您尚未符合滿額折扣資格')
+                alert('您尚未符合滿額折扣資格~\n>>商品金額約11,000，才會符合週年慶滿額折底呦！！')
             }
             text += `</br>
     🔷國際運費：1公斤250元</br>

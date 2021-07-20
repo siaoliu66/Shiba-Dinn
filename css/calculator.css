@@ -3,6 +3,7 @@
         max-width: 680px;
         border: 1px solid #ddd;
         padding: 15px;
+        margin: 0 auto
     }
 
     .input-group {

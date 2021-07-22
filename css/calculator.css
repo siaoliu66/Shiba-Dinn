@@ -74,3 +74,60 @@ body {
   border: 0;
 }
 /*# sourceMappingURL=calculator.css.map */
+    .wrap {
+        max-width: 680px;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 0 auto
+    }
+
+    .input-group {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .input-group-text {
+        display: flex;
+        align-items: center;
+        padding: .375rem .75rem;
+        margin-bottom: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        text-align: center;
+        white-space: nowrap;
+        background-color: #e9ecef;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+    }
+
+    .form {
+        display: block;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        width: 80%;
+    }
+
+    .input-group-prepend {
+        width: 120px;
+    }
+
+    .info {
+        color: #495057;
+        margin-left: 5px;
+    }
+
+    button {
+        margin-top: 10px;
+        width: 80px;
+        height: 30px;
+    }

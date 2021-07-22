@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,26 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <link rel="stylesheet" href="css/calculator.css">
     <script src="js/calculator.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrap">
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">商品金額</span>
-            </div>
-            <input type="number" class="form price" placeholder="請輸入日幣金額">
-        </div>
-
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">日本境內運費</span>
-            </div>
-            <input type="number" class="form shipping" placeholder="請輸入日本境內運費,無運費請填0">
-        </div>
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">預估重量</span>
-            </div>
-            <input type="number" class="form num" placeholder="請輸入預估重量(公斤)">
-        </div>
-        <div class="input-group"><input type="checkbox" class="vip">是否符合週年慶滿額折</div>
+      <div class="header">
+        <img src="image/logo.png" alt="">
+      </div>
+      <div class="container">
+        <label for="price">商品金額</label>
+        <input type="number" class="form price" id="price" placeholder="請輸入日幣金額">
+        <label for="shipping">日本境內運費</label>
+        <input type="number" class="form shipping" id="shipping" placeholder="請輸入日本境內運費,無運費請填0">
+        <label for="num">預估重量</label>
+        <input type="number" class="form num" id="num" placeholder="請輸入預估重量(公斤)">
+        <div class="input-group"><input type="checkbox" class="vip" id="vip"><label for="vip" style="margin:0px">是否符合週年慶滿額折</label></div>
         <button onclick="cal()">計算價格</button>
-        <!-- <span class="info">目前日幣匯率為0.273</span> -->
-        <hr>
-        <div class="text"></div>
-        <div class="copy"></div>
+      </div>
+      <hr>
+      <div class="text"></div>
+      <div class="copy"></div>
     </div>
+    </body>
 </html>

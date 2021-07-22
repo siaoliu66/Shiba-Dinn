@@ -1,57 +1,76 @@
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #FFD68C;
+}
 
-    .wrap {
-        max-width: 680px;
-        border: 1px solid #ddd;
-        padding: 15px;
-    }
+.wrap {
+  max-width: 588px;
+  padding: 15px;
+  width: 100%;
+  margin: auto;
+  background-color: #006973;
+  color: #FFD68C;
+}
 
-    .input-group {
-        display: flex;
-        align-items: stretch;
-        width: 100%;
-        margin-top: 10px;
-    }
+.wrap .header {
+  text-align: center;
+}
 
-    .input-group-text {
-        display: flex;
-        align-items: center;
-        padding: .375rem .75rem;
-        margin-bottom: 0;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #495057;
-        text-align: center;
-        white-space: nowrap;
-        background-color: #e9ecef;
-        border: 1px solid #ced4da;
-        border-radius: .25rem;
-    }
+.wrap .header img {
+  width: 200px;
+}
 
-    .form {
-        display: block;
-        padding: .375rem .75rem;
-        font-size: 1rem;
-        line-height: 1.5;
-        color: #495057;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid #ced4da;
-        border-radius: .25rem;
-        width: 80%;
-    }
+.wrap .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
-    .input-group-prepend {
-        width: 120px;
-    }
+.wrap .container label {
+  margin: 5px;
+  font-size: 1rem;
+}
 
-    .info {
-        color: #495057;
-        margin-left: 5px;
-    }
+.wrap .container .form {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
 
-    button {
-        margin-top: 10px;
-        width: 80px;
-        height: 30px;
-    }
+.wrap .container .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.wrap .container .info {
+  color: #495057;
+  margin-left: 5px;
+}
+
+.wrap .container button {
+  width: 120px;
+  height: 35px;
+  font-size: 1rem;
+  border-radius: 25px;
+  margin: 5px auto;
+  border: 0;
+}
+/*# sourceMappingURL=calculator.css.map */

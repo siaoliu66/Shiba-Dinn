@@ -2,7 +2,7 @@ function cal() {
     var price = parseInt($(".price").val())
     var Shipping = parseInt($(".shipping").val())
     var num = parseFloat($(".num").val())
-    var totalPrice = Math.round((price + Shipping) * 272 / 1000)
+    var totalPrice = Math.round((price + Shipping) * 273 / 1000)
     var finalPrice = Math.round(totalPrice + num * 250 + 60)
     // var vipPrice
 //   var text = `<p>📣報價如下</br>🔷商品金額：`

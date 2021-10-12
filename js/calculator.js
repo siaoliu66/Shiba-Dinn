@@ -43,14 +43,14 @@ function cal() {
 //             alert('您尚未符合滿額折扣資格~\n>>商品金額約11,000，才會符合週年慶滿額折底呦！！')
 //         }
 //         text += `</br>
-// 🔷國際運費：1公斤240元</br>
+// 🔷國際運費：1公斤250元</br>
 // 🔷應付金額：<span class="totalPrice">${toCurrency(vipPrice)}</span> + <span class="Num">250*${num}</span>(重量預估${num}kg以內) + 60(超商運費) = <span class="finalPrice">${toCurrency(finalPrice)}</span></p>`
 //     } else {
 //         if (Shipping == 0) {
 //             text += `<span class="Price">${toCurrency(price)}</span>`
 //         } else { text += `[<span class="Price">${toCurrency(price)}</span> + <span class="Shipping">${toCurrency(Shipping)}</span>(日本境內運費)]` }
 //         text += ` * 0.272 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>
-// 🔷國際運費：1公斤240元</br>
+// 🔷國際運費：1公斤250元</br>
 // 🔷應付金額：<span class="totalPrice">${toCurrency(totalPrice)}</span> + <span class="Num">250*${num}</span>(重量預估${num}kg以內) + 60(超商運費) = <span class="finalPrice">${toCurrency(finalPrice)}</span></p>`
 //     }
 var text = `<p>📣報價如下</br>🔷商品金額：`
@@ -58,7 +58,7 @@ if (Shipping == 0) {
         text += `<span class="Price">${toCurrency(price)}</span>`
     } else { text += `[<span class="Price">${toCurrency(price)}</span> + <span class="Shipping">${toCurrency(Shipping)}</span>(日本境內運費)]` }
     text += ` * 0.272 = <span class="totalPrice">${toCurrency(totalPrice)}</span></br>
-🔷國際運費：1公斤240元</br>
+🔷國際運費：1公斤250元</br>
 🔷應付金額：<span class="totalPrice">${toCurrency(totalPrice)}</span> + <span class="Num">250*${num}</span>(重量預估${num}kg以內) + 60(超商運費) = <span class="finalPrice">${toCurrency(finalPrice)}</span></p>`
 
 

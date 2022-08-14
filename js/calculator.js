@@ -70,15 +70,15 @@
 //     console.log(text)
 // }
 
-// function CopyTextToClipboard(id) {
-//     var TextRange = document.createRange();
-//     TextRange.selectNode(document.querySelector(id));
-//     sel = window.getSelection();
-//     sel.removeAllRanges();
-//     sel.addRange(TextRange);
-//     document.execCommand("copy");
-//     // alert("複製完成！")  //此行可加可不加
-// }
+function CopyTextToClipboard(id) {
+    var TextRange = document.createRange();
+    TextRange.selectNode(document.querySelector(id));
+    sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(TextRange);
+    document.execCommand("copy");
+    // alert("複製完成！")  //此行可加可不加
+}
 
 
 function toCurrency(num){

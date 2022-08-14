@@ -69,20 +69,20 @@
                   $(".num").val("")
                   console.log(text)
               },
-              CopyTextToClipboard: function (id) {
-                var TextRange = document.createRange();
-                TextRange.selectNode(document.querySelector(id));
-                sel = window.getSelection();
-                sel.removeAllRanges();
-                sel.addRange(TextRange);
-                document.execCommand("copy");
-                // alert("複製完成！")  //此行可加可不加  
-              },
-              toCurrency:function(num){
-                var parts = num.toString().split('.');
-                parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-                return parts.join('.'); 
-              }
+            //   CopyTextToClipboard: function (id) {
+            //     var TextRange = document.createRange();
+            //     TextRange.selectNode(document.querySelector(id));
+            //     sel = window.getSelection();
+            //     sel.removeAllRanges();
+            //     sel.addRange(TextRange);
+            //     document.execCommand("copy");
+            //     // alert("複製完成！")  //此行可加可不加  
+            //   },
+            //   toCurrency:function(num){
+            //     var parts = num.toString().split('.');
+            //     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            //     return parts.join('.'); 
+            //   }
             },
         })
     </script>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiba-Dinn</title>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/vue@2"></script>
     <link rel="stylesheet" href="css/calculator.css">
     <script src="js/calculator.js"></script>
   </head>
@@ -17,18 +18,74 @@
         <img src="https://github.com/siaoliu66/Shiba-Dinn/blob/gh-pages/image/logo.png?raw=true" alt="">
       </div>
       <div class="container">
+        <label for="price">日幣匯率</label>
+        <input type="number" class="form price" id="exchange" v-model.number="exchange" placeholder="請輸入日幣匯率">
         <label for="price">商品金額</label>
-        <input type="number" class="form price" id="price" placeholder="請輸入日幣金額">
+        <input type="number" class="form price" id="price" v-model.number="price" placeholder="請輸入日幣金額">
         <label for="shipping">日本境內運費</label>
-        <input type="number" class="form shipping" id="shipping" placeholder="請輸入日本境內運費,無運費請填0">
+        <input type="number" class="form shipping" id="shipping" v-model.number="shipping" placeholder="請輸入日本境內運費,無運費請填0">
         <label for="num">預估重量</label>
-        <input type="number" class="form num" id="num" placeholder="請輸入預估重量(公斤)">
+        <input type="number" class="form num" id="num" v-model.number="num" placeholder="請輸入預估重量(公斤)">
         <!-- <div class="input-group"><input type="checkbox" class="vip" id="vip"><label for="vip" style="margin:0px">是否符合週年慶滿額折</label></div> -->
-        <button onclick="cal()">計算價格</button>
+        <button @click="cal">計算價格</button>
       </div>
       <hr>
+
       <div class="text"></div>
       <div class="copy"></div>
     </div>
+
+    <script>
+    Vue.filter('currency',function(value){
+        return value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
+    });
+    var app = new Vue({
+          el:'.wrap',
+          data:{
+            exchange:0,
+            price:0,
+            shipping:0,
+            num:0,
+            totalPrice:0,
+            finalPrice:0,
+          },
+          methods: {
+            cal: function () {
+              this.totalPrice = Math.round((this.price + this.shipping)* this.exchange)
+              this.finalPrice = Math.round((this.totalPrice + this.num * 250 + 60))
+              var text = `<p>📣報價如下</br>🔷商品金額：`
+              if (this.shipping == 0) {
+                      text += `<span class="Price">${toCurrency(this.price)}</span>`
+                  } else { text += `[<span class="Price">${toCurrency(this.price)}</span> + <span class="Shipping">${toCurrency(this.shipping)}</span>(日本境內運費)]` }
+                  text += ` * ${this.exchange} = <span class="totalPrice">${toCurrency(this.totalPrice)}</span></br>
+              🔷國際運費：1公斤250元</br>
+              🔷應付金額：<span class="totalPrice">${toCurrency(this.totalPrice)}</span> + <span class="Num">250*${this.num}</span>(重量預估${this.num}kg以內) + 60(超商運費) = <span class="finalPrice">${toCurrency(this.finalPrice)}</span></p>`
+
+
+                  $(".text").html(text)
+                  $(".copy").html(`<button onClick="CopyTextToClipboard('.text')">點擊複製</button>`)
+                  $(".price").val("")
+                  $(".shipping").val("")
+                  $(".num").val("")
+                  console.log(text)
+              },
+              CopyTextToClipboard: function (id) {
+                var TextRange = document.createRange();
+                TextRange.selectNode(document.querySelector(id));
+                sel = window.getSelection();
+                sel.removeAllRanges();
+                sel.addRange(TextRange);
+                document.execCommand("copy");
+                // alert("複製完成！")  //此行可加可不加  
+              },
+              toCurrency:function(num){
+                var parts = num.toString().split('.');
+                parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                return parts.join('.'); 
+              }
+            },
+        })
+    </script>
+    
     </body>
 </html>
